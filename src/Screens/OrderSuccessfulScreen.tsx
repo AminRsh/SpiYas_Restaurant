@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { MdVerified } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom';
 import GridLoader from 'react-spinners/GridLoader';
-import orderSuccessful from '../assets/ordersuccess.png';
+import orderSuccessful from '../assets/order-success.png';
 
 const OrderSuccessfulScreen = () => {
   const [loading, setLoading] = useState(true);
