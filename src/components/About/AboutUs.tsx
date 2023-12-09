@@ -1,6 +1,12 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+
 import AboutItem from './AboutUsItem';
+import Adult from "../../assets/Image/adult-blur-blurred-background-687824.png";
+import Group from "../../assets/ICON/Group 204.png";
+import Chef from "../../assets/Image/chef-cook-food-33614.png";
+import Group1 from "../../assets/ICON/Group 204.png";
+import Architecture from "../../assets/Image/architecture-building-city-2047397.png";
+import Group2 from "../../assets/ICON/Group 245.png";
+
 
 interface AboutItemProps {
   id: number;
@@ -11,19 +17,29 @@ interface AboutItemProps {
 }
 
 const AboutUs = () => {
-  const [aboutData, setAboutData] = useState<AboutItemProps[]>([]);
-
-  useEffect(() => {
-    axios
-      .get('/aboutus.json')
-      .then((res) => {
-        // console.log("Data fetched successfully:", res.data);
-        setAboutData(res.data);
-      })
-      .catch((error) => {
-        console.error('Error fetching aboutus.json:', error);
-      });
-  }, []);
+  const aboutData: AboutItemProps[] = [
+    {
+      "id": 1,
+      "image": Adult,
+      "icon": Group,
+      "title": "Fast Delivery",
+      "description": "Fast Delivery combines exceptional taste with lightning-fast service. We pride ourselves on delivering a diverse range of delectable dishes swiftly to your doorstep. Crafted with fresh ingredients and culinary passion, our menu caters to every palate, ensuring quality and flavor in every order. Experience convenience and culinary excellence with Fast Delivery – where speed meets satisfaction."
+    },
+    {
+      "id": 2,
+      "image": Chef,
+      "icon": Group1,
+      "title": "A Good Auto Responder",
+      "description": "RapidReply enhances customer engagement with swift, smart auto-responses. Our advanced system ensures immediate, accurate replies 24/7, using cutting-edge technology for seamless communication. Elevate your service with RapidReply: quick, effective, and reliable."
+    },
+    {
+      "id": 3,
+      "image": Architecture,
+      "icon": Group2,
+      "title": "Home Delivery",
+      "description": "Home Delivery ensures fast, reliable delivery of essentials to your doorstep. Our efficient service covers everything from groceries to meals, offering a seamless, stress-free experience. Choose us for speedy, dependable home delivery tailored to your needs."
+    }
+  ];
 
   // console.log("aboutData:", aboutData);
 
