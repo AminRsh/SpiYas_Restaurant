@@ -22,7 +22,7 @@ const SideNav: React.FC<SideNavProps> = ({ onNavClick }) => {
     } else {
       setSidenav(true);
     }
-  }, { passive: true });
+  });
 
   const menu = [
     { id: 1, text: 'Food List' },
