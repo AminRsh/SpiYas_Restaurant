@@ -44,7 +44,7 @@ const DeliveryProvider: React.FC<DeliveryProviderProps> = ({ children }) => {
   const [disabled, setDisabled] = useState(true);
 
   useEffect(() => {
-    console.log('Current context input state:', input);
+    // console.log('Current context input state:', input);
   }, [input]);
 
   const value = {
@@ -53,7 +53,7 @@ const DeliveryProvider: React.FC<DeliveryProviderProps> = ({ children }) => {
     setInput,
     setDisabled,
   };
-  console.log(setInput);
+  // console.log(setInput);
   return (
     <DeliveryContext.Provider value={value}>
       {children}

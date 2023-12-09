@@ -37,7 +37,7 @@ const Navbar = () => {
     }
   };
 
-  window.addEventListener('scroll', onChangeHeader);
+  window.addEventListener('scroll', onChangeHeader, { passive: true });
 
   return (
     <header

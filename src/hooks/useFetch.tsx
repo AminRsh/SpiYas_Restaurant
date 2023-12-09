@@ -12,7 +12,7 @@ const useFetch = (): [FoodType[], boolean, unknown] => {
       try {
         const foods = await getFoods();
         setData(foods);
-        console.log(foods);
+        // console.log(foods);
         setLoading(false);
       } catch (error) {
         setError(error);

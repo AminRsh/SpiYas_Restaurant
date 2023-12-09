@@ -27,7 +27,7 @@ export const getFoods = async () => {
       id: doc.id,
       ...doc.data(),
     })) as FoodType[];
-    console.log(foods);
+    // console.log(foods);
     return foods;
   } catch (error) {
     console.error('Error fetching foods', error);

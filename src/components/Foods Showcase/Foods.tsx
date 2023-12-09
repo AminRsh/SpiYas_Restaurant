@@ -15,7 +15,7 @@ const Foods: React.FC = () => {
       console.error(error);
     } else {
       setFoods(fetchedFoods);
-      console.log(fetchedFoods);
+      // console.log(fetchedFoods);
     }
   }, [fetchedFoods, error]);
 
@@ -25,7 +25,7 @@ const Foods: React.FC = () => {
 
   return (
     <section className="my-12 max-w-screen-xl mx-auto px-6">
-      {/* food Menu tab  */}
+     
       <div className="flex items-center justify-center space-x-6">
         <p
           className={
@@ -59,12 +59,11 @@ const Foods: React.FC = () => {
         </p>
       </div>
 
-      {/* all foods  */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
         {foods
           .filter((item: FoodType) => menuTab === item.foodType)
           .map((item: FoodType) => {
-            console.log(item);
+            // console.log(item);
             return loading ? (
               <Skeleton key={item.id} />
             ) : (

@@ -11,19 +11,19 @@ const SideNav: React.FC<SideNavProps> = ({ onNavClick }) => {
   const [sidenav, setSidenav] = useState(true);
   console.log(user);
 
-  //toggling the side nav
   const handlenav = () => {
     setSidenav(!sidenav);
   };
 
-  // auto hide
+
   window.addEventListener('resize', () => {
     if (window.innerWidth < 1098) {
       setSidenav(false);
     } else {
       setSidenav(true);
     }
-  });
+  }, { passive: true });
+
   const menu = [
     { id: 1, text: 'Food List' },
     { id: 2, text: 'Add Food' },
